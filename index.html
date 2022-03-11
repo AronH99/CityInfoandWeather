@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oef1</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma-rtl.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.js"
+      integrity="sha512-MNW6IbpNuZZ2VH9ngFhzh6cUt8L/0rSVa60F8L22K1H72ro4Ki3M/816eSDLnhICu7vwH/+/yb8oB3BtBLhMsA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer type="module" src="./js/index.js"></script>
+  </head>
+  <body>
+    <div class="section">
+      <div class="container">
+        <h1>
+          Add postcode and countrycode, press Info => City will get added
+          automatically, then press Weather for 5 day info on the weather of
+          that city
+        </h1>
+        <form>
+          <div class="control">
+            <label>Postcode</label>
+            <input class="input" placeholder="2860" type="text" />
+          </div>
+          <div class="control">
+            <label>Landcode</label>
+            <input class="input2" placeholder="BE" type="text" />
+          </div>
+          <div class="control">
+            <label>City</label>
+            <input
+              class="input3"
+              placeholder="Sint-Katelijne-Waver"
+              type="text"
+            />
+          </div>
+          <div class="control">
+            <button class="button">Info</button>
+          </div>
+          <div class="control">
+            <button class="button2">Weather</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <h2>Info</h2>
+        <div class="columns-info"></div>
+      </div>
+    </div>
+    <template showinginfo>
+      <div class="section">
+        <div class="container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>lon</th>
+                <th>lat</th>
+                <th>city</th>
+                <th>region</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>%test%</td>
+                <td>%test2%</td>
+                <td>%test3%</td>
+                <td>%test4%</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </template>
+    <template showingtemperatures>
+      <div class="section">
+        <div class="container">
+          <p class="p5">%min%°C %max%°C</p>
+        </div>
+      </div>
+    </template>
+  </body>
+</html>
